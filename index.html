@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container mb-5">
+      <div class="row pt-5">
+        <div class="col-3">
+          <div
+            class="nav flex-column nav-pills nav-edit"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <button
+              class="nav-link active"
+              id="bt1-tab"
+              data-toggle="pill"
+              data-target="#bt1"
+              type="button"
+              role="tab"
+              aria-controls="bt1"
+              aria-selected="true"
+            >
+              Bài tập 1
+            </button>
+            <button
+              class="nav-link"
+              id="bt2-tab"
+              data-toggle="pill"
+              data-target="#bt2"
+              type="button"
+              role="tab"
+              aria-controls="bt2"
+              aria-selected="false"
+            >
+              Bài tập 2
+            </button>
+            <button
+              class="nav-link"
+              id="bt3-tab"
+              data-toggle="pill"
+              data-target="#bt3"
+              type="button"
+              role="tab"
+              aria-controls="bt3"
+              aria-selected="false"
+            >
+              Bài tập 3
+            </button>
+            <button
+              class="nav-link"
+              id="bt4-tab"
+              data-toggle="pill"
+              data-target="#bt4"
+              type="button"
+              role="tab"
+              aria-controls="bt4"
+              aria-selected="false"
+            >
+              Bài tập 4
+            </button>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="bt1"
+              role="tabpanel"
+              aria-labelledby="bt1-tab"
+            >
+              <h1>Tìm ngày, tháng, năm của ngày trước và sau</h1>
+              <div class="form-group">
+                <input
+                  type="date"
+                  name="dateEnter"
+                  id="dateEnter"
+                  class="form-control"
+                  placeholder="Nhập vào ngày, tháng, năm"
+                />
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="optionDay" id="optionDay">
+                  <option value="NA">Chọn ngày bạn muốn tìm?</option>
+                  <option value="P">Ngày trước đó</option>
+                  <option value="A">Ngày sau đó</option>
+                </select>
+              </div>
+              <button class="btn btn-success" id="hanldeFindDate">
+                Tìm ngày, tháng, năm
+              </button>
+              <div id="dateResult"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bt2"
+              role="tabpanel"
+              aria-labelledby="bt2-tab"
+            >
+              <h1>Cho biết tháng, năm đó có bao nhiêu ngày</h1>
+
+              <div class="form-group">
+                <input
+                  type="month"
+                  name="monthEnter"
+                  id="monthEnter"
+                  class="form-control"
+                  placeholder="Nhập vào tháng, năm"
+                />
+              </div>
+              <button class="btn btn-success" id="hanldeFindDay">
+                Số ngày trong tháng
+              </button>
+              <div id="dayResult"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bt3"
+              role="tabpanel"
+              aria-labelledby="bt3-tab"
+            >
+              <h1>Cách đọc số nguyên có ba chữ số</h1>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="numberRead"
+                  id="numberRead"
+                  class="form-control"
+                  placeholder="Nhập vào số có 3 chữ số"
+                />
+              </div>
+              <button class="btn btn-success" id="hanldeReadNumber">
+                Đọc số
+              </button>
+              <div id="readNumberResult"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bt4"
+              role="tabpanel"
+              aria-labelledby="bt4-tab"
+            >
+              <h1>Tìm sinh viên xa trường nhất</h1>
+              <h4>Nhập sinh viên thứ nhất</h4>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="personOne"
+                  id="personOne"
+                  class="form-control"
+                  placeholder="Nhập tên sinh viên thứ nhất"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personOneLongitude"
+                  id="personOneLongitude"
+                  class="form-control"
+                  placeholder="Nhập vào kinh độ"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personOneLatitude"
+                  id="personOneLatitude"
+                  class="form-control"
+                  placeholder="Nhập vào vĩ độ"
+                />
+              </div>
+              <h4>Nhập sinh viên thứ hai</h4>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="personTwo"
+                  id="personTwo"
+                  class="form-control"
+                  placeholder="Nhập tên sinh viên thứ hai"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personTwoLongitude"
+                  id="personTwoLongitude"
+                  class="form-control"
+                  placeholder="Nhập vào kinh độ"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personTwoLatitude"
+                  id="personTwoLatitude"
+                  class="form-control"
+                  placeholder="Nhập vào vĩ độ"
+                />
+              </div>
+              <h4>Nhập sinh viên thứ ba</h4>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="personThree"
+                  id="personThree"
+                  class="form-control"
+                  placeholder="Nhập tên sinh viên thứ ba"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personThreeLongitude"
+                  id="personThreeLongitude"
+                  class="form-control"
+                  placeholder="Nhập vào kinh độ"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personThreeLatitude"
+                  id="personThreeLatitude"
+                  class="form-control"
+                  placeholder="Nhập vào vĩ độ"
+                />
+              </div>
+              <h4>Nhập tọa độ trường học</h4>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="schoolName"
+                  id="schoolName"
+                  class="form-control"
+                  placeholder="Nhập tên trường"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="schoolLongitude"
+                  id="schoolLongitude"
+                  class="form-control"
+                  placeholder="Nhập vào kinh độ"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="schoolLatitude"
+                  id="schoolLatitude"
+                  class="form-control"
+                  placeholder="Nhập vào vĩ độ"
+                />
+              </div>
+              <button class="btn btn-success" id="hanldeDistance">
+                Tìm khoảng cách xa nhất
+              </button>
+              <div id="distanceResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

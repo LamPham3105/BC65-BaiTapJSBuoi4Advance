@@ -1,0 +1,16 @@
+.nav-edit .nav-link{
+    margin: 5px;
+}
+
+.nav-edit button {
+    color: #1a1d2d;
+    border: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #35a22c;
+}
+
+.form-control {
+    width: 50%;
+}
