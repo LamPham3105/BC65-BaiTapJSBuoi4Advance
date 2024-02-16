@@ -58,8 +58,10 @@ function GetPreviousDate(day, month, year){
 
     if (daySubOne == 0){
         month--;
-        if (month == 0)
+        if (month == 0) {
+            month = LAST_MONTH;
             year--;
+        }
         
         day = GetDay(month, year);;
         if (day == 0){
@@ -113,12 +115,12 @@ function GetDay(month, year) {
         case 8:
         case 10:
         case 12:
-            return 30;
+            return 31;
         case 4:
         case 6:
         case 9:
         case 11:
-            return 31;
+            return 30;
         case 2:
             if (IsLeapYear(year))
                 return 29;
@@ -424,7 +426,7 @@ document.getElementById("hanldeDistance").onclick = function() {
 
     var distanceThree = Math.sqrt(Math.pow(schoolLongitude - personThreeLongitude, 2) + Math.pow(schoolLatitude - personThreeLatitude, 2))
     arrDistance.push(distanceThree);
-    arrName.push(personOne);
+    arrName.push(personThree);
 
     var maxDistance = Number.MIN_VALUE;
     var person;
